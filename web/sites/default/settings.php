@@ -638,7 +638,7 @@ $settings['update_free_access'] = FALSE;
  * configuration values in settings.php will not fire any of the configuration
  * change events.
  */
-# $config['system.site']['name'] = 'My Drupal site';
+$config['system.site']['name'] = "Recettes d'Atlas";
 # $config['user.settings']['anonymous'] = 'Visitor';
 
 /**
