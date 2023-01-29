@@ -638,7 +638,7 @@ $settings['update_free_access'] = FALSE;
  * configuration values in settings.php will not fire any of the configuration
  * change events.
  */
-$config['system.site']['name'] = "Recettes d'Atlas";
+# $config['system.site']['name'] = 'My Drupal site';
 # $config['user.settings']['anonymous'] = 'Visitor';
 
 /**
@@ -805,4 +805,4 @@ $databases['default']['default'] = array (
   'driver' => 'mysql',
   'autoload' => 'core/modules/mysql/src/Driver/Database/mysql/',
 );
-$settings['config_sync_directory'] = 'sites/default/files/config_B0JU2eYuF6mpBTYJDpb9IiU12A_HA7t55BF2PvcAGBSdVi7qdbbjRp7Ytq6FOXoRT9cfyn4hzA/sync';
+$settings['config_sync_directory'] = 'sites/default/files/config/sync';

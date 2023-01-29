@@ -1,0 +1,17 @@
+name: formation
+type: theme
+base theme: bartik
+version: "9.x-1.0"
+core: "8.x"
+core_version_requirement: ^8 || ^9
+package: formation
+description: "theme crée pour le module de salah"
+screenshot: screenshot.png
+regions:
+  header: "Entete"
+  content: "Région de contenu"
+  primary_menu: "Menu principale"
+  secondary_menu: "Menu secondaire"
+  sidebar_first: "Première barre latérale"
+  sidebar_second: "Deuxièmme barre latérale"
+  footer: "Pied de page"
