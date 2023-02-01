@@ -1,6 +1,6 @@
 name: formation
 type: theme
-base theme: bartik
+base theme: false
 version: "9.x-1.0"
 core: "8.x"
 core_version_requirement: ^8 || ^9
@@ -15,3 +15,7 @@ regions:
   sidebar_first: "Première barre latérale"
   sidebar_second: "Deuxièmme barre latérale"
   footer: "Pied de page"
+
+libraries:
+  - formation/global-css
+  - formation/global-js

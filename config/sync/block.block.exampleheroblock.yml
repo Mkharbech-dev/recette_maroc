@@ -1,0 +1,20 @@
+uuid: 57a9d325-7f5d-4bb9-b76d-b36b293a0dff
+langcode: fr
+status: true
+dependencies:
+  module:
+    - module_salah
+  theme:
+    - bartik
+id: exampleheroblock
+theme: bartik
+region: sidebar_first
+weight: 0
+provider: null
+plugin: module_salah_salah
+settings:
+  id: module_salah_salah
+  label: 'Recettes marocaines'
+  label_display: visible
+  provider: module_salah
+visibility: {  }

@@ -799,10 +799,10 @@ $databases['default']['default'] = array (
   'username' => 'root',
   'password' => 'root',
   'prefix' => '',
-  'host' => 'recette_maroc_mysql_1',
-  'port' => '3306',
+  'host' => 'host.docker.internal',
+  'port' => '3308',
   'namespace' => 'Drupal\\mysql\\Driver\\Database\\mysql',
   'driver' => 'mysql',
   'autoload' => 'core/modules/mysql/src/Driver/Database/mysql/',
 );
-$settings['config_sync_directory'] = 'sites/default/files/config/sync';
+$settings['config_sync_directory'] = '../config/sync';

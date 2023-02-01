@@ -1,0 +1,14 @@
+uuid: afe5790e-10dd-4975-8fa8-f26cf363c831
+langcode: fr
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: vymHlgJy26BuI5GGj9-IXjwR3dRC5C0tij4BpWJnoqw
+id: feedback
+label: 'Website feedback'
+recipients:
+  - salah_ita@yahoo.fr
+reply: ''
+weight: 0
+message: 'Votre message a été envoyé.'
+redirect: ''

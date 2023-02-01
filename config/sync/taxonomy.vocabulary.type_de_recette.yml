@@ -1,0 +1,8 @@
+uuid: aaa5396c-ed20-422f-a455-a8bf3ae391e0
+langcode: fr
+status: true
+dependencies: {  }
+name: 'Type de recette'
+vid: type_de_recette
+description: 'citer le type de recette'
+weight: 0

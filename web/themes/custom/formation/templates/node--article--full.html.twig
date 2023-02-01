@@ -104,6 +104,11 @@
     {% endif %}
   </header>
   <div{{ content_attributes.addClass('node__content', 'clearfix') }}>
+    {# Recuperer tout le contenu sauf l'image par exemple ou seleument le titre de type recette #}
+    {#
+    {{ content|without('field_image') }}
+    {{ content.field_type_de_recette[0]['#title'] }}
+    #}
     {{ content }}
   </div>
 </article>
