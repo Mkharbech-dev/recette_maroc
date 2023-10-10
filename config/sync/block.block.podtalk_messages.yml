@@ -1,0 +1,22 @@
+uuid: 1ccf8eb2-2092-43c9-93f3-7b5adaf5604a
+langcode: fr
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - podtalk
+_core:
+  default_config_hash: KC12e0aosUnBBs5bd374JVcQjJaFNOSIHzu0dUGf22o
+id: podtalk_messages
+theme: podtalk
+region: header
+weight: 0
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  label_display: '0'
+  provider: system
+visibility: {  }

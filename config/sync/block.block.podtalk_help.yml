@@ -1,0 +1,22 @@
+uuid: aa07bcbf-5a5b-45b7-9d2a-801f0d2bf054
+langcode: fr
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - podtalk
+_core:
+  default_config_hash: '-laWx8WA-ikiIEH3NJQ0hVbjqk3iEuBms91LB0B4IQU'
+id: podtalk_help
+theme: podtalk
+region: content
+weight: -30
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  label_display: '0'
+  provider: help
+visibility: {  }

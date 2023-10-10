@@ -28,7 +28,7 @@ class salahController extends ControllerBase{
     return [
       '#theme' => 'recettes-liste',
       '#items'=> $recettes,
-      '#title' => $this->t('Nos meilleures marques de voitures')
+      '#title' => $this->t('Nos meilleures recetes du Maroc')
     ];
   }
 

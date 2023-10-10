@@ -1,0 +1,20 @@
+uuid: 8a5f56fe-20fd-427a-a79f-710c8471cadd
+langcode: fr
+status: true
+dependencies:
+  module:
+    - module_salah
+  theme:
+    - formation
+id: formation_exampleheroblock
+theme: formation
+region: sidebar_first
+weight: 0
+provider: null
+plugin: module_salah_salah
+settings:
+  id: module_salah_salah
+  label: 'Recettes marocaines'
+  label_display: visible
+  provider: module_salah
+visibility: {  }

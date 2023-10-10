@@ -1,0 +1,20 @@
+uuid: a4226005-2b57-4493-90ac-120d4ead115a
+langcode: fr
+status: true
+dependencies:
+  theme:
+    - podtalk
+_core:
+  default_config_hash: ItFhhiUOoeR7oIq73ZaCV7PAYrOwXZ-9fazMzF5DJXM
+id: podtalk_page_title
+theme: podtalk
+region: content
+weight: -50
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility: {  }
