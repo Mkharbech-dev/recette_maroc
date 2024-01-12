@@ -1,9 +1,16 @@
 type: theme
-core_version_requirement: ^8 || ^9
+core_version_requirement: ^8 || ^9 || ^10
 name: podtalk
 core: "8.x"
+description: "integration de mon template podtalk"
 base theme: false
+
 libraries:
-  - podtalk/main
-libraries-override:
-  olivero/global-styling: podtalk/main
+  - podtalk/global-styling
+regions:
+  navigation: 'Navigation'
+  content: 'content'
+  topic: 'topic_section'
+  footer: 'pied de page'
+
+

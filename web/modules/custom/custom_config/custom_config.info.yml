@@ -1,0 +1,5 @@
+name: custom_config
+type: module
+description: configuration pérsonnalisée
+package: Custom
+core_version_requirement: ^9 || ^10

@@ -1,11 +1,10 @@
 {#
 /**
  * @file
- * Bartik's theme implementation to display a single page.
+ * Theme override to display a single page.
  *
- * The doctype, html, head and body tags are not in this templates. Instead they
- * can be found in the html.html.twig templates normally located in the
- * core/modules/system directory.
+ * The doctype, html, head and body tags are not in this template. Instead they
+ * can be found in the html.html.twig template in this directory.
  *
  * Available variables:
  *
@@ -28,60 +27,94 @@
  *   comment/reply/12345).
  *
  * Regions:
- * - page.header: Items for the header region.
- * - page.highlighted: Items for the highlighted region.
- * - page.primary_menu: Items for the primary menu region.
- * - page.secondary_menu: Items for the secondary menu region.
- * - page.featured_top: Items for the featured top region.
+ * - page.header_left: Items for the header left region.
+ * - page.header_center: Items for the header center region.
+ * - page.header_right: Items for the header right region.
+ * - page.banner_slideshow: Items for the banner slideshow region.
+ * - page.page_title: Items for the pagetitle region.
  * - page.content: The main content of the current page.
- * - page.sidebar_first: Items for the first sidebar.
- * - page.sidebar_second: Items for the second sidebar.
- * - page.featured_bottom_first: Items for the first featured bottom region.
- * - page.featured_bottom_second: Items for the second featured bottom region.
- * - page.featured_bottom_third: Items for the third featured bottom region.
- * - page.footer_first: Items for the first footer column.
- * - page.footer_second: Items for the second footer column.
- * - page.footer_third: Items for the third footer column.
- * - page.footer_fourth: Items for the fourth footer column.
- * - page.footer_fifth: Items for the fifth footer column.
- * - page.breadcrumb: Items for the breadcrumb region.
- *
+ * - page.left_sidebar: Items for the left sidebar.
+ * - page.right_second: Items for the right sidebar.
+ * - page.footer: Items Footer bottom region.
  * @see template_preprocess_page()
  * @see html.html.twig
  */
 #}
 <div id="page-wrapper">
-  <div id="page">
-    {# Inclusion de notre fichier header.html.twig #}
-    {% include '@formation/includes/header.html.twig' %}
-    <div id="main-wrapper" class="layout-main-wrapper layout-container clearfix">
-      <div id="main" class="layout-main clearfix">
-        {{ page.breadcrumb }}
-        <main id="content" class="column main-content" role="main">
-          <section class="section">
-            <a id="main-content" tabindex="-1"></a>
+  <header>
+    {% include '@panache/includes/header.html.twig' %}
+
+    {% if page.header_navigation %}
+      {% include '@panache/includes/header-navigation.html.twig' %}
+    {% endif %}
+  </header>
+  <main class="main-wrapper">
+    {% if page.banner_slideshow %}
+      {{ page.banner_slideshow }}
+    {% endif %}
+    {% if panache.display_sample_blocks %}
+      {% if is_front %}
+        {% include '@panache/includes/banner-slideshow.html.twig' %}
+        {% include '@panache/includes/sample-introductory-block.html.twig' %}
+        {% include '@panache/includes/testimonials.html.twig' %}
+      {% endif %}
+    {% endif %}
+    {% if page.page_title %}
+      <section class="panache-page-title">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              {{ page.page_title }}
+            </div>
+          </div>
+        </div>
+      </section>
+    {% endif %}
+    {% if page.left_sidebar and page.content %}
+      <section class="container sidebar left-sidebar">
+        <div class="row">
+          <div class="col-md-5 col-lg-4">
+            {{ page.left_sidebar }}
+          </div>
+          <div class="col-md-7 col-lg-8">
             {{ page.content }}
-          </section>
-        </main>
-        {#
-        {% if page.sidebar_first %}
-          <div id="sidebar-first" class="column sidebar">
-            <aside class="section" role="complementary">
-              {{ page.sidebar_first }}
-            </aside>
           </div>
-        {% endif %}
-        #}
-      </div>
-    </div>
-    <footer class="site-footer">
-      <div class="layout-container">
-        {% if page.footer %}
-          <div class="site-footer__bottom">
-            {{ page.footer }}
+        </div>
+      </section>
+    {% elseif page.right_sidebar and page.content %}
+      <section class="container sidebar right-sidebar">
+        <div class="row">
+          <div class="col-md-7 col-lg-8">
+            {{ page.content }}
           </div>
-        {% endif %}
+          <div class="col-md-5 col-lg-4">
+            {{ page.right_sidebar }}
+          </div>
+        </div>
+      </section>
+    {% else %}
+      <section class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            {{ page.content }}
+          </div>
+        </div>
+      </section>
+    {% endif %}
+  </main>
+  <footer>
+    {% if page.footer %}
+      <div class="panache-footer">
+        <div class="container">
+          {{ page.footer }}
+        </div>
       </div>
-    </footer>
-  </div>
+    {% endif %}
+    {% if page.footer is empty %}
+      <div class="panache-footer">
+        {% include '@panache/includes/footer.html.twig' %}
+      </div>
+    {% endif %}
+  </footer>
 </div>
+

@@ -1,0 +1,17 @@
+<?php
+
+/**
+ * Implements hook_theme().
+ */
+function custom_config_theme() {
+  return [
+    'liens_sociaux' => [
+        'variables' => [
+          'facebook' => NULL,
+          'twitter' => NULL,
+          'linkdin' => NULL
+        ],
+      'template' => 'social-links',
+    ]
+  ];
+}

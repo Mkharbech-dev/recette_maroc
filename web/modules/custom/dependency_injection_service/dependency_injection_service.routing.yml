@@ -1,0 +1,7 @@
+dependency_injection_service.custom_db_form:
+  path: '/ajouter/utilisateur'
+  defaults:
+    _form: '\Drupal\dependency_injection_service\Form\CustomForm'
+    _title: "Ajouter un collaborateur"
+  requirements:
+    _permission: 'access content'

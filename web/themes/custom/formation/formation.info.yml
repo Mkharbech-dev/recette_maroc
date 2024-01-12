@@ -1,6 +1,6 @@
 name: formation
 type: theme
-base theme: false
+base theme: panache
 version: "9.x-1.0"
 core: "8.x"
 core_version_requirement: ^8 || ^9
@@ -8,14 +8,21 @@ package: formation
 description: "theme crée pour le module de salah"
 screenshot: screenshot.png
 regions:
-  header: "Entete"
-  content: "Région de contenu"
-  primary_menu: "Menu principale"
-  secondary_menu: "Menu secondaire"
-  sidebar_first: "Première barre latérale"
-  sidebar_second: "Deuxièmme barre latérale"
-  footer: "Pied de page"
-
+  header_left: 'Header left'
+  header_center: 'Header center'
+  header_right: 'Header right'
+  header_navigation: 'Header Navigation'
+  banner_slideshow: 'Banner Slideshow'
+  page_title: 'Page title'
+  content: 'Content'
+  left_sidebar: 'Left sidebar'
+  right_sidebar: 'Right sidebar'
+  footer: 'Footer'
 libraries:
-  - formation/global-css
-  - formation/global-js
+  - core/jquery
+  - core/drupal
+  - core/drupalSettings
+  - panache/global-styling
+
+project: 'formation'
+datestamp: 1588086762

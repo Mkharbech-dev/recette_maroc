@@ -1,0 +1,4 @@
+name: "Module injection de dépendance"
+description: "module pour apprendre l'injection de dépendance"
+type: module
+core_version_requirement: ^8 || ^9
